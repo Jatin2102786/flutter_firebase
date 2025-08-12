@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "878925598929",
+    "firebase_url": "https://simm-a4fbf-default-rtdb.firebaseio.com",
+    "project_id": "simm-a4fbf",
+    "storage_bucket": "simm-a4fbf.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878925598929:android:4ca162e80283991dc435f0",
+        "android_client_info": {
+          "package_name": "com.example.flutter_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3VEC6l_g_n4jt0zgJFGC_EHKWSSfotSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878925598929:android:b75c1b324d57c307c435f0",
+        "android_client_info": {
+          "package_name": "com.o7solutions.simm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3VEC6l_g_n4jt0zgJFGC_EHKWSSfotSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
