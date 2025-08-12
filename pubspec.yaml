@@ -48,6 +48,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: 0.20.2
+  firebase_database: ^11.3.10
 
 
 flutter_launcher_icons:
