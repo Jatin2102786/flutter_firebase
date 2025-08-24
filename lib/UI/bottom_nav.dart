@@ -50,7 +50,7 @@ class _BottomNavExampleState extends State<BottomNavExample> {
         unselectedItemColor: AppColors.secondary,
         // Slightly transparent white for unselected
         onTap: _onTap,
-        type: BottomNavigationBarType.shifting,
+        type: BottomNavigationBarType.fixed,
         // <--- Added this line
         items: const [
           BottomNavigationBarItem(

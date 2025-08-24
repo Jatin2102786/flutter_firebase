@@ -49,6 +49,7 @@ dependencies:
     sdk: flutter
   intl: 0.20.2
   firebase_database: ^11.3.10
+  flutter_bloc: ^9.1.1
 
 
 flutter_launcher_icons:
@@ -82,6 +83,7 @@ flutter:
   assets:
     - assets/images/
     - assets/simm-a4fbf-firebase-adminsdk-fbsvc-dc9a1ff2cf.json
+    - assets/simm-a4fbf-firebase-adminsdk-fbsvc-abe30318cc.json
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

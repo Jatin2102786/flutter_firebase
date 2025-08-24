@@ -1,14 +1,22 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase/BLOC/auth_page.dart';
+import 'package:flutter_firebase/BLOC/bloc.dart';
+import 'package:flutter_firebase/BLOC/events.dart';
 import 'package:flutter_firebase/UI/bottom_nav.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:bloc/bloc.dart';
+import '';
 
 final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
 FlutterLocalNotificationsPlugin();
 
-@pragma('vm:entry-point')
+@pragma('vm:entry-point')  //task
+
+// backgroundMessageHandler
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp();
   print('Handling a background message: ${message.messageId}');
@@ -100,7 +108,7 @@ Future<void> _requestNotificationPermissions() async {
   if (settings.authorizationStatus == AuthorizationStatus.authorized) {
     print('User granted permission for notifications.');
   } else if (settings.authorizationStatus == AuthorizationStatus.provisional) {
-    print('User granted provisional permission (iOS only).');
+    print('User granted provisional permission');
   } else {
     print('User declined or has not yet granted permission for notifications.');
   }
@@ -130,6 +138,7 @@ class _MyAppState extends State<MyApp> {
       print('Foreground notification: ${message.notification?.title}');
 
 
+      // for different payloads
       RemoteNotification? notification = message.notification;
       AndroidNotification? android = message.notification?.android;
       // AppleNotification? apple = message.notification?.apple;
@@ -213,6 +222,10 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
+      // home: BlocProvider(
+      //   create: (_) => AuthBloc()..add(AppStarted()), // check login on start
+      //   child:  AuthPage(),
+      // ),
       home: BottomNavExample(),
     );
   }
